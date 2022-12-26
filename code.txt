@@ -1,0 +1,50 @@
+window.onunload = function () {
+        setTimeout(function(){
+                if ( document.URL === 'http://127.0.0.1:5500/index.html' ){
+                sessionStorage.removeItem('page');
+                console.log("deleted")
+         };
+            }, 1000);
+}
+----------------------------------
+
+
+let myRequest = new XMLHttpRequest();
+myRequest.open("GET", "/city.json");
+myRequest.send();
+console.log(myRequest);
+
+
+myRequest.onreadystatechange = function () {
+  // console.log(myRequest.readyState);
+  // console.log(myRequest.status);
+  if (this.readyState === 4 && this.status === 200) {
+    console.log(this.responseText);
+    let jsData = JSON.parse(this.responseText);
+    console.log(jsData);
+    console.log(Object.values(jsData)[0][0]);
+    let a = document.getElementById("path");
+    a.innerHTML = Object.values(jsData)[0][0];
+    a.insertAdjacentElement = Object.values(jsData)[1][0];    
+  }
+};
+-----------------------------------
+
+
+let myRequest = new XMLHttpRequest();
+myRequest.open("GET", "https://api.github.com/users/elzerowebschool/repos");
+myRequest.send();
+myRequest.onreadystatechange = function () {
+  if (this.readyState === 4 && this.status === 200) {
+    // console.log(this.responseText);
+    let jsData = JSON.parse(this.responseText);
+    console.log(jsData);
+    for (let i = 0; i < jsData.length; i++) {
+      let div = document.getElementById("parent_path");
+      div.innerHTML += "<a onclick='path(this)' class='path' href='map.html' value='' id='path'>' "+ jsData[i].full_name +"</a>";
+      
+    }
+  }
+};
+
+
