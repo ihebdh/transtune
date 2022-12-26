@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/city.css">
+    <title></title>
+    <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico" />
+
+</head>
+<body>
+  <script>
+            window.document.title = sessionStorage.getItem('city');
+  </script>
+    <nav>
+      <a class= "home" href="../index.html"><span>TRANS</span>TUNE</a>
+        <ul>
+          <li><a data-id="add" href="/html/add.html">Add</a></li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        <div class="movebar">
+          <a class="return" onclick="history.back()" ><span id="return"></span></a>
+
+          <h2 data-id="transport">choose a transport </h2>
+        </div>
+      
+        <!----------------------------transport---------------------------->
+        <div class="parent_path">
+          <a onclick="transtype(this)"  class="path" value = "taxi" href="city.html" data-id="taxi">TAXI JAMA3I</a>
+          <a onclick="transtype(this)" class="path" href="city.html" value = "louage" data-id="louage">LOUAGE</a>
+        </div>
+        <!------------------------------------------------------------------->
+    </div>
+    <footer> Copyright &copy;2022 TRANSTUNE</footer> 
+    <script src="../main.js"></script>
+    <script src="../lang.js"></script>
+
+</body>
