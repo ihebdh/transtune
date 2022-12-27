@@ -26,10 +26,4 @@ function initialize(){
         sessionStorage.clear();
 }
 
-const icon = document.querySelector("#targetlang")
-const element = document.querySelector("#ul")
 
-icon.addEventListener('click',event => {
-        event.preventDefault;
-        element.style.display = element.style.display === 'none' ? 'block' : 'none';
-});
