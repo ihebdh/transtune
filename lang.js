@@ -86,6 +86,15 @@ const translation = {
 
 };
 
+
+document.addEventListener('DOMContentLoaded',()=>{
+      //use english by default 
+      const language = localStorage.getItem("language") || "en"; // اذا لم تكن اللغة متوفرة استخدم الانجليزية
+      setlanguage(language);
+      
+      
+})
+
 function language(){
     let clickLang = document.querySelectorAll("li")
     /*set the language selected from the page to the localstorage in the browser  */
@@ -100,16 +109,10 @@ function language(){
 }
 
 
-document.addEventListener('DOMContentLoaded',()=>{
-      //use english by default 
-      const language = localStorage.getItem("language") || "en"; // اذا لم تكن اللغة متوفرة استخدم الانجليزية
-      setlanguage(language);
-      
-      
-})
+
 
 function setlanguage(languages){
-      //select the html elements that will change the language
+      //select the html elements that will change their language
       const elements = document.querySelectorAll("[data-id]");
       //loop inside  the list created
       elements.forEach((element) =>{
@@ -122,13 +125,13 @@ function setlanguage(languages){
       document.dir = languages === "ar" ? "rtl" : "ltr";
       if (languages ==="ar"){
               //change the css style according to the language
-              if (document.getElementById("ul") !== null) {document.getElementById("ul").style.right= "-85px";} 
               document.querySelector(":root").style.setProperty("--dislangtrian", '87px');
-              if(document.getElementById("return") !== null){this.style.transform = "rotateY(180deg)";}
+              if (document.getElementById("ul") !== null) {document.getElementById("ul").style.right= "-85px";} 
+              if(document.getElementById("return") !== null){document.getElementById("return").style.transform = "rotateY(180deg)";}
       }
       else{
-              if(document.getElementById("ul") !== null){this.style.right= "1px"};
-              document.querySelector(":root").style.setProperty("--dislangtrian", '4px');
+                document.querySelector(":root").style.setProperty("--dislangtrian", '4px');
+                if (document.getElementById("ul") !== null) {document.getElementById("ul").style.right= "1px";}
       }
       
 }
