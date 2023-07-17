@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <title>TransTune</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAABCQkIAAAAAAADY2wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREBEREhEREREQERESERERERARERIREREREBEREhEREREQERESERERERARERIREREQAAASIiIRERERERERERERERERERERERERERERERERH//wAA//8AAP//AAD//wAA//8AAP//AAD33wAA998AAPffAAD33wAA998AAPffAADBBwAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
+</head>
+<body >
+    <section class="curved">
+        <div class="container">
+        <div class="nav">
+            <a class= "home" href="index.html"><span>TRANS</span>TUNE</a>
+            <div class="menu">
+                <a class="add" href="/html/add.html"data-id="add">add</a>
+                
+                   <div class="lang" id="targetlang">
+                    <span class="languages">
+                    </span>
+                    <ul id="ul" >
+                        <li value="ar" id="ar" onclick="language()"><span></span>Arabic</li>
+                        <li value="en" id="en" onclick="language()"><label></label>English</li>
+                    </ul>
+                </div> 
+            </div>
+
+        </div>
+        
+    </div>
+    </section>
+    <div class="logo">
+        <img src="image/taxi.png" alt="taxi">
+    </div>
+    <div class="content">
+        <a class="main-button" onclick="schow()" data-id="choose">choose a city</a>
+        <div class="grid" id="buttons">
+            <button onclick="location.href = '/html/transporttype.html', cityname(this)  " value="grandtunis"  class="city" data-id="grandtunis" >Grand Tunis</button>
+            <button onclick="location.href = '/html/transporttype.html', cityname(this)  " value="ariana"  class="city" data-id="ariana" >Ariana</button>
+            <button onclick="location.href = '/html/transporttype.html', cityname(this)  " value="nabeul"  class="city" data-id="nabeul">Nabeul</button>
+            <button onclick="location.href = '/html/transporttype.html', cityname(this)  " value="monastir"  class="city" data-id="monastir">Monastir</button>
+            <button onclick="location.href = '/html/transporttype.html', cityname(this)  " value="sousse"  class="city" data-id="sousse">Sousse</button>
+            <button class="city disabled" href="javascript:void(0)" data-id="beja" >Béja</button>
+            <button class="city disabled"  href="javascript:void(0)" data-id="benarous">Ben Arous</button>
+            <button class="city disabled" href="javascript:void(0)"data-id="bizerte">Bizerte</button>
+            <button class="city disabled" href="javascript:void(0)"data-id="gabes">Gabès</button>
+            <button class="city disabled" href="javascript:void(0)"data-id="Gafsa">Gafsa</button>
+            <button class="city disabled"  href="javascript:void(0)" data-id="Jendouba">Jendouba</button>
+            <button class="city disabled" href="javascript:void(0)" data-id="Kairouan">Kairouan</button>
+            <button class="city disabled" href="javascript:void(0)"data-id="Kasserine">Kasserine</button>
+            <button class="city disabled" href="javascript:void(0)" data-id="Kebili">Kebili</button>
+            <button class="city disabled"  href="javascript:void(0)" data-id="Kef">Kef</button>
+            <button class="city disabled" href="javascript:void(0)" data-id="mahdia">Mahdia</button>
+            <button class="city disabled" href="javascript:void(0)"data-id="manouba">Manouba</button>
+            <button class="city disabled" href="javascript:void(0)"data-id="medenine">Medenine</button>
+            <button class="city disabled"  href="javascript:void(0)"data-id="sfax">Sfax</button>
+            <button class="city disabled" href="javascript:void(0)"data-id="sidibouzid">Sidi Bouzid</button>
+            <button class="city disabled" href="javascript:void(0)"data-id="siliana">Siliana</button>
+            <button class="city disabled" href="javascript:void(0)"data-id="tataouine">Tataouine</button>
+            <button class="city disabled"  href="javascript:void(0)"data-id="tozeur">Tozeur</button>
+            <button class="city disabled" href="javascript:void(0)" data-id="zaghouan">Zaghouan</button>
+        </div>
+    </div>
+    <footer> Copyright &copy;2022 TRANSTUNE</footer> 
+    <script src="lang.js"></script>
+    <script src="main.js"></script>
+    
+
+</body>
+<script>
+    document.addEventListener("contextmenu", e => e.preventDefault(), false);
+
+    document.addEventListener("keydown", e => {
+  // USE THIS TO DISABLE CONTROL AND ALL FUNCTION KEYS
+  // if (e.ctrlKey || (e.keyCode>=112 && e.keyCode<=123)) {
+  // THIS WILL ONLY DISABLE CONTROL AND F12
+  if (e.ctrlKey || e.keyCode==123) {
+    e.stopPropagation();
+    e.preventDefault();
+  }
+});
+    </script>
+</html>

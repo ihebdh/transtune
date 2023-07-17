@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/city.css">
+    <title>Transport Grand tunis</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAABCQkIAAAAAAADY2wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREBEREhEREREQERESERERERARERIREREREBEREhEREREQERESERERERARERIREREQAAASIiIRERERERERERERERERERERERERERERERERH//wAA//8AAP//AAD//wAA//8AAP//AAD33wAA998AAPffAAD33wAA998AAPffAADBBwAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
+    
+
+</head>
+<body>
+  <script>
+    window.document.title = sessionStorage.getItem('city');
+</script>
+    <nav>
+      <a class= "home" href="../index.html"><span>TRANS</span>TUNE</a>
+        <ul>
+          <li><a data-id="add" href="/html/add.html">Add</a></li>
+        </ul>
+      </nav>
+      <!------------main----------->
+      <div class="container">
+        <div class="movebar">
+          <a class="return" onclick="history.back()" ><span id="return"></span></a>
+
+          <h2 data-id="path">choose a path </h2>
+        </div>
+          <div class="parent_path" id="parent_path">
+            <!----------------------------paths-------------------->
+            
+            <!------------------------------------------------------->
+          </div>
+      </div>
+
+      <footer> Copyright &copy;2022 TRANSTUNE</footer> 
+
+      <script src="../city.js"></script>
+      <script src="../main.js"></script>
+      <script src="../lang.js"></script>
+
+
+
+      
+</body>
+
+<script>
+  document.addEventListener("contextmenu", e => e.preventDefault(), false);
+
+  document.addEventListener("keydown", e => {
+// USE THIS TO DISABLE CONTROL AND ALL FUNCTION KEYS
+// if (e.ctrlKey || (e.keyCode>=112 && e.keyCode<=123)) {
+// THIS WILL ONLY DISABLE CONTROL AND F12
+if (e.ctrlKey || e.keyCode==123) {
+  e.stopPropagation();
+  e.preventDefault();
+}
+});
+  </script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/city.css">
+    <title data-id="add">Add</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAABCQkIAAAAAAADY2wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREBEREhEREREQERESERERERARERIREREREBEREhEREREQERESERERERARERIREREQAAASIiIRERERERERERERERERERERERERERERERERH//wAA//8AAP//AAD//wAA//8AAP//AAD33wAA998AAPffAAD33wAA998AAPffAADBBwAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
+
+</head>
+<body>
+    <nav style="background-color: #fab700;">
+        <a class= "home" href="../index.html"><span>TRANS</span>TUNE</a>
+    </nav>
+    <div class="container">
+        
+        <h1 class="title" data-id="helpus">HELP US GROW THIS WEBAPP TO FACILITATE PUBLIC TRANSPORT FOR LOCAL TUNISIAN AND VISITORS.</h1>
+
+            <div class="card">
+                <h2 class="h2" data-id="form"> Please fill this form.</h2>
+                <form  method="POST" action="https://www.actionforms.io/e/r/transtune" id="form" >
+                    <label class="input">
+                    <input id = "traject"class="input field" type="text" name="path" placeholder="from.. to.." value="" />
+                    <span class="input label" data-id="epath">Enter the path</span>
+                    </label>
+
+                    <label class="input">
+                        <input id = "link"class="input field" type="text" name="link" placeholder="https://goo.gl/maps/... " value="" />
+                        <span class="input label" data-id="lpath">past here the link of the path</span>
+                        <a href="https://www.youtube.com/watch?v=1nnxGiqf0io" target="_blank" class="how" data-id="how">here is how you can draw a map and share it's link with google maps</a>
+                    </label>
+                    <br>
+                    <label class="input">
+                        <input id = "name" class="input field" type="text" name="name" placeholder="... " value="" />
+                        <span class="input label" data-id="urname">tipe your name</span>
+                    </label>
+
+                    <div class="button-group">
+                    <button id="send" type="submit"  value ="submit" data-id="send">Send</button>
+                    <button type="reset" class="reset-button" data-id="reset">Reset</button>
+                    </div>
+                    <div id="message"></div>
+            </form>
+            </div>
+    
+    </div>
+    <footer style="background-color: #333333;"> Copyright &copy;2022 TRANSTUNE</footer> 
+    <script src="../add.js"></script>
+    <script src="../lang.js"></script>
+
+ 
+    
+</body>
+<script>
+    document.addEventListener("contextmenu", e => e.preventDefault(), false);
+
+    document.addEventListener("keydown", e => {
+  // USE THIS TO DISABLE CONTROL AND ALL FUNCTION KEYS
+  // if (e.ctrlKey || (e.keyCode>=112 && e.keyCode<=123)) {
+  // THIS WILL ONLY DISABLE CONTROL AND F12
+  if (e.ctrlKey || e.keyCode==123) {
+    e.stopPropagation();
+    e.preventDefault();
+  }
+});
+    </script>
+</html>
